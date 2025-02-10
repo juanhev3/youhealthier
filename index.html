@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouHealthier</title>
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -28,7 +28,7 @@
         }
 
         .container {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
         }
 
@@ -53,36 +53,36 @@
 
         h1.header-txt {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 80px;
             font-weight: bold;
             font-style: italic;
         }
 
-        .about-content,
-        .product-list,
-        footer {
-            margin: 50px auto;
-            width: 60%;
-            text-align: justify;
-            font-size: 18px;
-            line-height: 1.6;
+        #about-us {
+            margin-top: 20px;
         }
 
-        .about-content h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
+        .about-content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .about-content img {
+            width: 100%;
+            height: auto;
         }
 
         .product-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
+            margin: 20px 0;
         }
 
         .product-item {
             width: 30%;
-            background: white;
             margin-bottom: 20px;
+            background: white;
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -94,11 +94,35 @@
             object-fit: cover;
         }
 
+        .product-item h2 {
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         footer {
-            background-color: #333;
+            position: relative;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 50px 0;
+            background: url('assets/img/fruit_background.jpg') no-repeat center center/cover;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        footer .container {
+            position: relative;
+            z-index: 2;
         }
 
         footer p {
@@ -135,21 +159,11 @@
     </header>
 
     <div class="slider">
-        <div><img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
-            <h2 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h2>
-        </div>
-        <div><img src="assets/img/Quinoa.jpeg" alt="Quinoa">
-            <h2 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h2>
-        </div>
-        <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
-            <h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2>
-        </div>
-        <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
-            <h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2>
-        </div>
-        <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
-            <h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2>
-        </div>
+        <div><img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca"><h2 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h2></div>
+        <div><img src="assets/img/Quinoa.jpeg" alt="Quinoa"><h2 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h2></div>
+        <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry"><h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2></div>
+        <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu"><h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2></div>
+        <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn"><h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2></div>
     </div>
 
     <section id="about-us">
@@ -157,7 +171,7 @@
             <h1><strong>Reflect your health through the power of good nutrition</strong></h1>
             <p>We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth. Our authentic, preservative-free, gluten-free, non-GMO foods and supplies are crafted to nourish your body and support a healthier, more balanced lifestyle.</p>
             <p>Let’s embrace vitality and well-being by consuming the pure, natural gifts that Mother Earth has offered us for millennia.</p>
-            <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier" style="width: 100%; height: auto;">
+            <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier">
         </div>
     </section>
 
@@ -201,7 +215,7 @@
         </div>
     </footer>
 
-    <a href="#" class="cd-top">⇁ Top</a>
+    <a href="#" class="cd-top">&#8679; Top</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
