@@ -40,6 +40,7 @@
                 <div class="container">
                     <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
                         <h1 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h1>
+                        <img src="assets/images/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
                     </div>
                 </div>
             </div>
@@ -47,20 +48,31 @@
                 <div class="container">
                     <div class="bottom-section">
                         <h1 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h1>
+                        <img src="assets/images/Quinoa.jpeg" alt="Quinoa">
                     </div>
                 </div>
             </div>
             <div class="a-slide slide3">
                 <div class="container">
                     <div class="bottom-section">
-                        <h1 class="header-txt">Camu Camu - Packed with Vitamin C for Immune Support</h1>
+                        <h1 class="header-txt">Goldenberry - Packed with Antioxidants</h1>
+                        <img src="assets/images/GOLDENBERRY.jpeg" alt="Goldenberry">
                     </div>
                 </div>
             </div>
             <div class="a-slide slide4">
                 <div class="container">
                     <div class="bottom-section">
-                        <h1 class="header-txt">Purple Corn - Antioxidant Powerhouse for Heart Health</h1>
+                        <h1 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h1>
+                        <img src="assets/images/CAMU_CAMU.jpeg" alt="Camu Camu">
+                    </div>
+                </div>
+            </div>
+            <div class="a-slide slide5">
+                <div class="container">
+                    <div class="bottom-section">
+                        <h1 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h1>
+                        <img src="assets/images/PURPLE_CORN.jpeg" alt="Purple Corn">
                     </div>
                 </div>
             </div>
@@ -77,6 +89,7 @@
                 <h1 class="header-txt scroll-reveal"><strong>Reflect your health through the power of good nutrition</strong></h1>
                 <p class="scroll-reveal">We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth. Our authentic, preservative-free, gluten-free, non-GMO foods and supplies are crafted to nourish your body and support a healthier, more balanced lifestyle.</p>
                 <p class="scroll-reveal">Let’s embrace vitality and well-being by consuming the pure, natural gifts that Mother Earth has offered us for millennia.</p>
+                <img src="assets/images/3D_purple_corn_quinoa_black_red_Maca_root_goldenberries.jpg" alt="About YouHealthier">
             </div>
         </div>
     </section>
@@ -86,38 +99,40 @@
             <h1 class="header-txt">Our Products</h1>
             <div class="product-list">
                 <div class="product-item">
-                    <img src="https://path-to-cloud-storage/black-maca.jpg" alt="Black Maca">
+                    <img src="assets/images/Red_and_Black_Maca2.jpg" alt="Black Maca">
                     <h2>Black Maca</h2>
                     <p>Boosts stamina and energy, supports hormonal balance.</p>
                 </div>
                 <div class="product-item">
-                    <img src="https://path-to-cloud-storage/red-maca.jpg" alt="Red Maca">
+                    <img src="assets/images/Red_and_Black_Maca2.jpg" alt="Red Maca">
                     <h2>Red Maca</h2>
                     <p>Enhances bone health, improves mood and reduces stress.</p>
                 </div>
                 <div class="product-item">
-                    <img src="https://path-to-cloud-storage/quinoa.jpg" alt="Quinoa">
+                    <img src="assets/images/Quinoa.jpeg" alt="Quinoa">
                     <h2>Quinoa</h2>
                     <p>Rich in protein, fiber, and essential amino acids.</p>
                 </div>
                 <div class="product-item">
-                    <img src="https://path-to-cloud-storage/camu-camu.jpg" alt="Camu Camu">
+                    <img src="assets/images/CAMU_CAMU.jpeg" alt="Camu Camu">
                     <h2>Camu Camu</h2>
                     <p>High in Vitamin C, strengthens immune system.</p>
                 </div>
                 <div class="product-item">
-                    <img src="https://path-to-cloud-storage/goldenberry.jpg" alt="Goldenberry">
+                    <img src="assets/images/GOLDENBERRY.jpeg" alt="Goldenberry">
                     <h2>Goldenberry</h2>
                     <p>Packed with antioxidants, supports digestion and eye health.</p>
                 </div>
                 <div class="product-item">
-                    <img src="https://path-to-cloud-storage/purple-corn.jpg" alt="Purple Corn">
+                    <img src="assets/images/PURPLE_CORN.jpeg" alt="Purple Corn">
                     <h2>Purple Corn</h2>
                     <p>Rich in antioxidants, promotes heart health and reduces inflammation.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <a href="#" class="cd-top">&#8679; Top</a>
 
     <footer id="contact-us">
         <div class="container">
@@ -137,7 +152,7 @@
         $('.slider').slick({
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 3500,
+            autoplaySpeed: 3000,
             arrows: false,
             fade: true,
             cssEase: 'linear'
@@ -145,6 +160,19 @@
 
         ScrollReveal().reveal('.scroll-reveal', { delay: 200 });
     </script>
+
+    <script>
+        $(window).on('load', function() {
+            $("#preloader").fadeOut();
+        });
+
+        $(document).ready(function(){
+            $(".cd-top").click(function() {
+                $('html, body').animate({ scrollTop: 0 }, "slow");
+            });
+        });
+    </script>
+
 </body>
 
 </html>
