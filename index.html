@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -13,13 +13,23 @@
     <style>
         .slider img {
             width: auto;
-            max-height: 400px;
-            margin: 0 auto;
+            height: 400px; /* Adjusted for a more square shape */
+            margin-top: 50px; /* Push images lower to avoid covering the menu */
+            object-fit: cover;
         }
+
         .site-header {
-            position: relative;
+            position: fixed;
+            top: 0;
+            width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.9); /* Ensure menu bar visibility */
+            padding: 10px 0;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 70px; /* Prevent content from being hidden under the fixed header */
         }
     </style>
 </head>
@@ -47,99 +57,54 @@
                 </div>
             </div>
         </div>
-        <div class="slider">
-            <div class="a-slide slide1">
-                <div class="container">
-                    <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
-                        <h1 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h1>
-                        <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide2">
-                <div class="container">
-                    <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
-                        <h1 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h1>
-                        <img src="assets/img/Quinoa.jpeg" alt="Quinoa">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide3">
-                <div class="container">
-                    <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
-                        <h1 class="header-txt">Goldenberry - Packed with Antioxidants</h1>
-                        <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry" style="max-height: 500px;">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide4">
-                <div class="container">
-                    <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
-                        <h1 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h1>
-                        <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu" style="max-height: 500px;">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide5">
-                <div class="container">
-                    <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
-                        <h1 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h1>
-                        <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn" style="max-height: 500px;">
-                    </div>
+    </header>
+
+    <div class="slider">
+        <div class="a-slide slide1">
+            <div class="container">
+                <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
+                    <h1 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h1>
+                    <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
                 </div>
             </div>
         </div>
-    </header>
+        <div class="a-slide slide2">
+            <div class="container">
+                <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
+                    <h1 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h1>
+                    <img src="assets/img/Quinoa.jpeg" alt="Quinoa">
+                </div>
+            </div>
+        </div>
+        <div class="a-slide slide3">
+            <div class="container">
+                <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
+                    <h1 class="header-txt">Goldenberry - Packed with Antioxidants</h1>
+                    <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
+                </div>
+            </div>
+        </div>
+        <div class="a-slide slide4">
+            <div class="container">
+                <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
+                    <h1 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h1>
+                    <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
+                </div>
+            </div>
+        </div>
+        <div class="a-slide slide5">
+            <div class="container">
+                <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
+                    <h1 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h1>
+                    <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h1 style="text-align: center; margin-top: 20px; font-weight: bold; font-style: italic; font-family: 'Georgia', serif;">
         Welcome to YouHealthier
     </h1>
-
-    <section id="about-us" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h1 class="header-txt scroll-reveal"><strong>Reflect your health through the power of good nutrition</strong></h1>
-                <p class="scroll-reveal">We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth. Our authentic, preservative-free, gluten-free, non-GMO foods and supplies are crafted to nourish your body and support a healthier, more balanced lifestyle.</p>
-                <p class="scroll-reveal">Let’s embrace vitality and well-being by consuming the pure, natural gifts that Mother Earth has offered us for millennia.</p>
-                <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier">
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="menu-cart scroll-reveal">
-        <div class="container"> 
-            <h1 class="header-txt">Our Products</h1>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
-                    <h2>Black and Red Maca</h2>
-                    <p>Boosts stamina, energy, and supports hormonal balance.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/Quinoa.jpeg" alt="Quinoa">
-                    <h2>Quinoa</h2>
-                    <p>Rich in protein, fiber, and essential amino acids.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
-                    <h2>Camu Camu</h2>
-                    <p>High in Vitamin C, strengthens immune system.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
-                    <h2>Goldenberry</h2>
-                    <p>Packed with antioxidants, supports digestion and eye health.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
-                    <h2>Purple Corn</h2>
-                    <p>Rich in antioxidants, promotes heart health and reduces inflammation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <a href="#" class="cd-top">⬹ Top</a>
 
     <footer id="contact-us">
         <div class="container">
