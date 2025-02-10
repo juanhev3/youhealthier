@@ -12,13 +12,15 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
     <style>
         .slider img {
-            max-width: 100%;
-            height: auto;
+            max-height: 300px; /* Reduce the overall slider image size */
+            width: auto;
+            display: block;
+            margin: 0 auto;
         }
-
-        .product-item img {
-            width: 250px;
-            height: auto;
+        .slider img[alt="Camu Camu"],
+        .slider img[alt="Goldenberry"],
+        .slider img[alt="Purple Corn"] {
+            max-height: 250px; /* Further reduce size for these specific images */
         }
     </style>
 </head>
