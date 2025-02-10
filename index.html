@@ -1,4 +1,4 @@
-<!doctype html> 
+<!doctype html>  
 <html class="no-js" lang="en">
 
 <head>
@@ -6,107 +6,150 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouHealthier</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
-    <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .site-header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .main-navigation {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+        }
+
+        .main-navigation li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin-top: 50px;
+        }
+
+        h1.header-txt {
+            text-align: center;
+            margin-top: 80px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .about-content,
+        .product-list,
+        footer {
+            margin: 50px 0;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="header-content">
-                <div class="top-menu scroll-reveal">
-                    <div class="menu">
-                        <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="medium">
-                            <button class="menu-icon dark" type="button" data-toggle="main-nav"></button>
-                            <div class="title-bar-title">Menu</div>
-                        </div>
-
-                        <nav id="main-nav" data-animate="menu-in menu-out">
-                            <ul class="main-navigation">
-                                <li><a class="m-active" href="#" data-text="Home">Home</a></li>
-                                <li><a class="m-anim" href="#about-us" data-text="About">About</a></li>
-                                <li><a class="m-anim" href="#products" data-text="Products">Products</a></li>
-                                <li><a class="m-anim" href="#contact-us" data-text="Contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider">
-            <div class="a-slide slide1">
-                <div class="container">
-                    <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
-                        <h1 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h1>
-                        <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide2">
-                <div class="container">
-                    <div class="bottom-section">
-                        <h1 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h1>
-                        <img src="assets/img/Quinoa.jpeg" alt="Quinoa" style="width: 90%; display: block; margin: 0 auto;">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide3">
-                <div class="container">
-                    <div class="bottom-section">
-                        <h1 class="header-txt">Goldenberry - Packed with Antioxidants</h1>
-                        <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide4">
-                <div class="container">
-                    <div class="bottom-section">
-                        <h1 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h1>
-                        <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
-                    </div>
-                </div>
-            </div>
-            <div class="a-slide slide5">
-                <div class="container">
-                    <div class="bottom-section">
-                        <h1 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h1>
-                        <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
-                    </div>
-                </div>
-            </div>
+            <nav>
+                <ul class="main-navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <h1 style="text-align: center; margin-top: 20px; font-weight: bold; font-style: italic; font-family: 'Georgia', serif;">
-        Welcome to YouHealthier
-    </h1>
+    <div class="slider">
+        <div><img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca"><h2 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h2></div>
+        <div><img src="assets/img/Quinoa.jpeg" alt="Quinoa"><h2 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h2></div>
+        <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry"><h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2></div>
+        <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu"><h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2></div>
+        <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn"><h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2></div>
+    </div>
 
-    <section id="about-us" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h1 class="header-txt scroll-reveal"><strong>Reflect your health through the power of good nutrition</strong></h1>
-                <p class="scroll-reveal">We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth. Our authentic, preservative-free, gluten-free, non-GMO foods and supplies are crafted to nourish your body and support a healthier, more balanced lifestyle.</p>
-                <p class="scroll-reveal">Let’s embrace vitality and well-being by consuming the pure, natural gifts that Mother Earth has offered us for millennia.</p>
-                <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier">
-            </div>
+    <section id="about-us">
+        <div class="container about-content">
+            <h1><strong>Reflect your health through the power of good nutrition</strong></h1>
+            <p>We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth. Our authentic, preservative-free, gluten-free, non-GMO foods and supplies are crafted to nourish your body and support a healthier, more balanced lifestyle.</p>
+            <p>Let’s embrace vitality and well-being by consuming the pure, natural gifts that Mother Earth has offered us for millennia.</p>
+            <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier" style="width: 100%; height: auto;">
         </div>
     </section>
 
-    <section id="products" class="menu-cart scroll-reveal">
-        <div class="container"> 
+    <section id="products">
+        <div class="container">
             <h1 class="header-txt">Our Products</h1>
             <div class="product-list">
                 <div class="product-item">
                     <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black Maca">
                     <h2>Black Maca</h2>
                     <p>Boosts stamina and energy, supports hormonal balance.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Red Maca">
-                    <h2>Red Maca</h2>
-                    <p>Enhances bone health, improves mood and reduces stress.</p>
                 </div>
                 <div class="product-item">
                     <img src="assets/img/Quinoa.jpeg" alt="Quinoa">
@@ -132,52 +175,42 @@
         </div>
     </section>
 
-    <a href="#" class="cd-top">&#8679; Top</a>
-
     <footer id="contact-us">
         <div class="container">
-<footer id="contact-us">
-    <div class="container">
-        <h1 class="header-txt" style="font-weight: bold !important; font-size: 32px !important;">Contact</h1>
-        <p style="font-weight: bold !important; font-size: 25px !important;">Email: contact@youhealthier.com | Phone: +01 562-555-0114</p>
-    </div>
-</footer>
-
+            <h1 class="header-txt">Contact</h1>
+            <p>Email: contact@youhealthier.com | Phone: +01 562-555-0114</p>
         </div>
     </footer>
 
+    <a href="#" class="cd-top">⇁ Top</a>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.2/what-input.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
-    <script src="js/app.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-    <script type="text/javascript">
-        $('.slider').slick({
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            arrows: false,
-            fade: true,
-            cssEase: 'linear'
-        });
-
-        ScrollReveal().reveal('.scroll-reveal', { delay: 200 });
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script>
-        $(window).on('load', function() {
-            $("#preloader").fadeOut();
-        });
+        $(document).ready(function () {
+            $('.slider').slick({
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                fade: true,
+                cssEase: 'linear'
+            });
 
-        $(document).ready(function(){
-            $(".cd-top").click(function() {
-                $('html, body').animate({ scrollTop: 0 }, "slow");
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.cd-top').fadeIn();
+                } else {
+                    $('.cd-top').fadeOut();
+                }
+            });
+
+            $('.cd-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 600);
+                return false;
             });
         });
     </script>
-
 </body>
 
 </html>
