@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>  
 <html class="no-js" lang="en">
 
 <head>
@@ -10,26 +10,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
     <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
-
     <style>
-        /* Ensure the menu appears above the slider */
-        .top-menu {
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Slider container */
-        .slider {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Reduce slider image sizes to prevent overlap */
         .slider img {
-            width: 100%;
-            height: auto;
+            width: auto;
             max-height: 400px;
-            object-fit: cover;
+            margin: 0 auto;
+        }
+        .site-header {
+            position: relative;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
         }
     </style>
 </head>
@@ -78,7 +68,7 @@
                 <div class="container">
                     <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
                         <h1 class="header-txt">Goldenberry - Packed with Antioxidants</h1>
-                        <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
+                        <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry" style="max-height: 500px;">
                     </div>
                 </div>
             </div>
@@ -86,7 +76,7 @@
                 <div class="container">
                     <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
                         <h1 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h1>
-                        <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
+                        <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu" style="max-height: 500px;">
                     </div>
                 </div>
             </div>
@@ -94,7 +84,7 @@
                 <div class="container">
                     <div class="bottom-section scroll-reveal" data-origin="left" data-distance="20%">
                         <h1 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h1>
-                        <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
+                        <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn" style="max-height: 500px;">
                     </div>
                 </div>
             </div>
@@ -117,7 +107,7 @@
     </section>
 
     <section id="products" class="menu-cart scroll-reveal">
-        <div class="container">
+        <div class="container"> 
             <h1 class="header-txt">Our Products</h1>
             <div class="product-list">
                 <div class="product-item">
