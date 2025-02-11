@@ -58,13 +58,20 @@
             font-style: italic;
         }
 
+        #welcome {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 40px 0;
+        }
+
         #about-us {
             margin-top: 20px;
         }
 
         .about-content p {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 22px; /* Increased font size */
+            margin: 15px 0;
         }
 
         .about-content img {
@@ -145,11 +152,11 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header" id="home">
         <div class="container">
             <nav>
                 <ul class="main-navigation">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about-us">About</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#contact-us">Contact</a></li>
@@ -164,6 +171,11 @@
         <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry"><h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2></div>
         <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu"><h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2></div>
         <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn"><h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2></div>
+    </div>
+
+    <!-- Added Welcome Message -->
+    <div id="welcome">
+        Welcome to YouHealthier
     </div>
 
     <section id="about-us">
@@ -215,7 +227,8 @@
         </div>
     </footer>
 
-    <a href="#" class="cd-top">&#8679; Top</a>
+    <!-- Fixed Up Arrow to Link to Home -->
+    <a href="#home" class="cd-top">&#8679; Top</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
@@ -237,14 +250,8 @@
                     $('.cd-top').fadeOut();
                 }
             });
-
-            $('.cd-top').click(function () {
-                $('html, body').animate({ scrollTop: 0 }, 600);
-                return false;
-            });
         });
     </script>
-    <a href="#" style="position: fixed; bottom: 20px; right: 20px; background-color: #333; color: white; padding: 10px 15px; border-radius: 50%; text-decoration: none; font-size: 18px;">&#8679; Top</a>
 </body>
 
 </html>
