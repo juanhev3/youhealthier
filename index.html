@@ -137,7 +137,7 @@
 
         footer p {
             font-weight: bold;
-            font-size: 20px;
+            font-size: 24px;
         }
 
         .cd-top {
@@ -161,8 +161,9 @@
     </style>
 </head>
 
-<body>
-    <header class="site-header" id="home">
+<!-- Add ID to the body for Home navigation -->
+<body id="home">
+    <header class="site-header">
         <div class="container">
             <nav>
                 <ul class="main-navigation">
@@ -242,16 +243,18 @@
     <footer id="contact-us">
         <div class="container">
             <h1 class="header-txt">Contact</h1>
-            <p style="font-size: 24px; font-weight: bold;">Email: contact@youhealthier.com | Phone: +01 562-555-0114</p>
+            <p>Email: contact@youhealthier.com | Phone: +01 562-555-0114</p>
         </div>
     </footer>
 
+    <!-- Correct Up Arrow Linking to Home -->
     <a href="#home" class="cd-top">&#8679;</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script>
         $(document).ready(function () {
+            // Slider initialization
             $('.slider').slick({
                 infinite: true,
                 autoplay: true,
@@ -261,12 +264,21 @@
                 cssEase: 'linear'
             });
 
+            // Show or hide the up arrow based on scroll position
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 100) {
                     $('.cd-top').fadeIn();
                 } else {
                     $('.cd-top').fadeOut();
                 }
+            });
+
+            // Smooth scrolling when clicking on navigation links
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 600);
             });
         });
     </script>
