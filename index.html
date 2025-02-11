@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -61,9 +60,9 @@
 
         #welcome {
             text-align: center;
-            font-size: 48px; /* Bigger font size */
+            font-size: 48px;
             font-weight: bold;
-            font-family: 'Playfair Display', serif; /* Stylish font */
+            font-family: 'Playfair Display', serif;
             color: #333;
             margin: 50px 0;
         }
@@ -73,7 +72,8 @@
         }
 
         .about-content p {
-            font-size: 22px; 
+            font-size: 24px;
+            line-height: 1.6;
             margin: 15px 0;
         }
 
@@ -150,8 +150,9 @@
             border-radius: 50%;
             text-decoration: none;
             display: none;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
+            z-index: 1000;
         }
 
         .cd-top:hover {
@@ -175,14 +176,23 @@
     </header>
 
     <div class="slider">
-        <div><img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca"><h2 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h2></div>
-        <div><img src="assets/img/Quinoa.jpeg" alt="Quinoa"><h2 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h2></div>
-        <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry"><h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2></div>
-        <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu"><h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2></div>
-        <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn"><h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2></div>
+        <div><img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
+            <h2 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h2>
+        </div>
+        <div><img src="assets/img/Quinoa.jpeg" alt="Quinoa">
+            <h2 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h2>
+        </div>
+        <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
+            <h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2>
+        </div>
+        <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
+            <h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2>
+        </div>
+        <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
+            <h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2>
+        </div>
     </div>
 
-    <!-- Enhanced Welcome Message -->
     <div id="welcome">
         Welcome to YouHealthier
     </div>
@@ -236,7 +246,6 @@
         </div>
     </footer>
 
-    <!-- Up Arrow to Scroll to Home -->
     <a href="#home" class="cd-top">&#8679;</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
