@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html class="no-js" lang="en">
 
 <head>
@@ -111,6 +111,40 @@
             text-overflow: ellipsis;
         }
 
+        #order-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 40px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #order-section h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        ul.order-list {
+            list-style: none;
+            padding: 0;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        ul.order-list li {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        ul.order-list li:hover {
+            background-color: #ddd;
+        }
+
         footer {
             position: relative;
             color: white;
@@ -161,7 +195,6 @@
     </style>
 </head>
 
-<!-- Add ID to the body for Home navigation -->
 <body id="home">
     <header class="site-header">
         <div class="container">
@@ -170,6 +203,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about-us">About</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="#order">Order</a></li>
                     <li><a href="#contact-us">Contact</a></li>
                 </ul>
             </nav>
@@ -201,43 +235,26 @@
     <section id="about-us">
         <div class="container about-content">
             <h1><strong>Reflect your health through the power of good nutrition</strong></h1>
-            <p>We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth. Our authentic, preservative-free, gluten-free, non-GMO foods and supplies are crafted to nourish your body and support a healthier, more balanced lifestyle.</p>
-            <p>Let’s embrace vitality and well-being by consuming the pure, natural gifts that Mother Earth has offered us for millennia.</p>
-            <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier">
+            <p>We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth.</p>
         </div>
     </section>
 
     <section id="products">
         <div class="container">
             <h1 class="header-txt">Our Products</h1>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
-                    <h2>Black and Red Maca</h2>
-                    <p>Boosts stamina, energy, and supports hormonal balance.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/Quinoa.jpeg" alt="Quinoa">
-                    <h2>Quinoa</h2>
-                    <p>Rich in protein, fiber, and essential amino acids.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
-                    <h2>Goldenberry</h2>
-                    <p>Packed with antioxidants, supports digestion and eye health.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
-                    <h2>Camu Camu</h2>
-                    <p>High in Vitamin C, strengthens immune system.</p>
-                </div>
-                <div class="product-item">
-                    <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
-                    <h2>Purple Corn</h2>
-                    <p>Rich in antioxidants, promotes heart health and reduces inflammation.</p>
-                </div>
-            </div>
         </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order-section">
+        <h1>Place Your Order</h1>
+        <ul class="order-list">
+            <li onclick="alert('Black and Red Maca is under construction!')">Black and Red Maca - $25.00</li>
+            <li onclick="alert('Quinoa is under construction!')">Quinoa - $15.00</li>
+            <li onclick="alert('Goldenberry is under construction!')">Goldenberry - $20.00</li>
+            <li onclick="alert('Camu Camu is under construction!')">Camu Camu - $18.00</li>
+            <li onclick="alert('Purple Corn is under construction!')">Purple Corn - $22.00</li>
+        </ul>
     </section>
 
     <footer id="contact-us">
@@ -247,14 +264,12 @@
         </div>
     </footer>
 
-    <!-- Correct Up Arrow Linking to Home -->
     <a href="#home" class="cd-top">&#8679;</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script>
         $(document).ready(function () {
-            // Slider initialization
             $('.slider').slick({
                 infinite: true,
                 autoplay: true,
@@ -264,7 +279,6 @@
                 cssEase: 'linear'
             });
 
-            // Show or hide the up arrow based on scroll position
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 100) {
                     $('.cd-top').fadeIn();
@@ -273,7 +287,6 @@
                 }
             });
 
-            // Smooth scrolling when clicking on navigation links
             $('a[href^="#"]').on('click', function (e) {
                 e.preventDefault();
                 $('html, body').animate({
