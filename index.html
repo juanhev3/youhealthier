@@ -344,6 +344,35 @@
     &#8679;
 </a>
 
+<script>
+    let selectedProduct = "";
+    let price = 0;
+
+    function openOrderModal(productName, productPrice) {
+        selectedProduct = productName;
+        price = productPrice;
+
+        document.getElementById("productDetails").innerHTML = `You are ordering: <b>${selectedProduct}</b> - $${price.toFixed(2)}`;
+        document.getElementById("totalPrice").innerHTML = `Total: $${price.toFixed(2)}`;
+        document.getElementById("orderModal").style.display = "block";
+    }
+
+    function closeOrderModal() {
+        document.getElementById("orderModal").style.display = "none";
+    }
+
+    function updateTotal() {
+        let quantity = document.getElementById("quantity").value;
+        let total = price * quantity;
+        document.getElementById("totalPrice").innerHTML = `Total: $${total.toFixed(2)}`;
+    }
+
+    function confirmOrder() {
+        alert(`Your order for ${selectedProduct} has been placed successfully!`);
+        closeOrderModal();
+    }
+</script>
+
 </body>
 
 </html>
