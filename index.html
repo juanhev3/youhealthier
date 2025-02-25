@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html class="no-js" lang="en">
 
 <head>
@@ -12,12 +12,43 @@
     <style>
         body {
             font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
+        }
+
+        .site-header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .container {
             width: 90%;
             margin: 0 auto;
+        }
+
+        .main-navigation {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+        }
+
+        .main-navigation li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
         }
 
         h1.header-txt {
@@ -27,12 +58,67 @@
             font-style: italic;
         }
 
-        #order {
+        #welcome {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            margin: 50px 0;
+        }
+
+        #about-us {
+            margin-top: 20px;
+        }
+
+        .about-content p {
+            font-size: 24px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .about-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .product-item {
+            width: 30%;
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-item h2 {
+            font-size: 20px;
+        }
+
+        #order-section {
             background-color: #fff;
             padding: 20px;
             margin: 40px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #order-section h1 {
             text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
 
         ul.order-list {
@@ -56,58 +142,58 @@
             background-color: #ddd;
         }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
+        footer {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            background: url('assets/img/fruit_background.jpg') no-repeat center center/cover;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
 
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
-            width: 50%;
-            text-align: center;
-            border-radius: 10px;
+        footer .container {
+            position: relative;
+            z-index: 2;
         }
 
-        .close {
-            float: right;
-            font-size: 28px;
-            cursor: pointer;
+        footer p {
+            font-weight: bold;
+            font-size: 24px;
         }
 
-        input {
-            padding: 10px;
-            font-size: 16px;
-            width: 60px;
-            margin: 10px 0;
-        }
-
-        button {
-            background-color: #28a745;
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
             color: white;
-            border: none;
             padding: 10px 15px;
-            font-size: 18px;
+            border-radius: 50%;
+            text-decoration: none;
+            display: none;
+            font-size: 20px;
             cursor: pointer;
-            border-radius: 5px;
+            z-index: 1000;
         }
 
-        button:hover {
-            background-color: #218838;
+        .cd-top:hover {
+            background: #555;
         }
     </style>
 </head>
 
-<body>
-
+<body id="home">
+    <a id="top"></a> <!-- Anchor for the up arrow to scroll to -->
     <header class="site-header">
         <div class="container">
             <nav>
@@ -122,97 +208,141 @@
         </div>
     </header>
 
-    <div id="home" class="container">
-        <h1 class="header-txt">Welcome to YouHealthier</h1>
+    <div class="slider">
+        <div><img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
+            <h2 class="header-txt">Black and Red Maca - Boost Your Energy Naturally</h2>
+        </div>
+        <div><img src="assets/img/Quinoa.jpeg" alt="Quinoa">
+            <h2 class="header-txt">Quinoa - A Superfood Rich in Protein and Fiber</h2>
+        </div>
+        <div><img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
+            <h2 class="header-txt">Goldenberry - Packed with Antioxidants</h2>
+        </div>
+        <div><img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
+            <h2 class="header-txt">Camu Camu - High in Vitamin C for Immune Support</h2>
+        </div>
+        <div><img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
+            <h2 class="header-txt">Purple Corn - Rich in Antioxidants for Heart Health</h2>
+        </div>
+    </div>
+
+    <div id="welcome">
+        Welcome to YouHealthier
     </div>
 
     <section id="about-us">
-        <div class="container">
-            <h1>About Us</h1>
-            <p>We offer 100% organic, natural products free of preservatives, gluten, and GMOs.</p>
+        <div class="container about-content">
+            <h1><strong>Reflect your health through the power of good nutrition</strong></h1>
+            <p>We are honored to offer you 100% organic, natural products provided by the ancient and blessed Mother Earth.</p>
+            <p>These authentic, natural, organic foods and ingredients are free of preservatives, gluten, and genetic modifications (Non-GMO).</p>
+            <p>They will support us in leading a healthier life, helping us navigate the challenges of daily life in a more wholesome way.</p>
+        
+        <p>Let us become healthier and more vigorous by consuming what nature and Mother Earth have been offering us for millennia.</p>
+        
+        <img src="assets/img/3D_purple_corn_quinoa_maca_goldenberries.jpg" alt="About YouHealthier">
         </div>
     </section>
 
+    <!-- Restored Our Products Section -->
     <section id="products">
         <div class="container">
             <h1 class="header-txt">Our Products</h1>
             <div class="product-list">
                 <div class="product-item">
+                    <img src="assets/img/Red_and_Black_Maca2.jpg" alt="Black and Red Maca">
                     <h2>Black and Red Maca</h2>
-                    <p>Boosts stamina and energy.</p>
+                    <p>Boosts stamina, energy, and supports hormonal balance.</p>
                 </div>
                 <div class="product-item">
+                    <img src="assets/img/Quinoa.jpeg" alt="Quinoa">
                     <h2>Quinoa</h2>
-                    <p>Rich in protein and fiber.</p>
+                    <p>Rich in protein, fiber, and essential amino acids.</p>
                 </div>
                 <div class="product-item">
+                    <img src="assets/img/GOLDENBERRY.jpeg" alt="Goldenberry">
                     <h2>Goldenberry</h2>
-                    <p>Packed with antioxidants.</p>
+                    <p>Packed with antioxidants, supports digestion and eye health.</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/img/CAMU_CAMU.jpeg" alt="Camu Camu">
+                    <h2>Camu Camu</h2>
+                    <p>High in Vitamin C, strengthens immune system.</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/img/PURPLE_CORN.jpeg" alt="Purple Corn">
+                    <h2>Purple Corn</h2>
+                    <p>Rich in antioxidants, promotes heart health and reduces inflammation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="order">
-        <div class="container">
-            <h1 class="header-txt">Place Your Order</h1>
-            <ul class="order-list">
-                <li><a href="#" onclick="openOrderModal('Black and Red Maca', 25)">Black and Red Maca - $25.00</a></li>
-                <li><a href="#" onclick="openOrderModal('Quinoa', 15)">Quinoa - $15.00</a></li>
-                <li><a href="#" onclick="openOrderModal('Goldenberry', 20)">Goldenberry - $20.00</a></li>
-                <li><a href="#" onclick="openOrderModal('Camu Camu', 18)">Camu Camu - $18.00</a></li>
-                <li><a href="#" onclick="openOrderModal('Purple Corn', 22)">Purple Corn - $22.00</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeOrderModal()">&times;</span>
-            <h2>Checkout</h2>
-            <p id="productDetails"></p>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" value="1" min="1" onchange="updateTotal()">
-            <p id="totalPrice"></p>
-            <button onclick="confirmOrder()">Confirm Order</button>
-        </div>
+    <!-- Order Section -->
+<section id="order">
+    <div class="container">
+        <h1 class="header-txt">Place Your Order</h1>
+        <ul style="list-style-type: none; padding: 0;">
+            <li><a href="#" onclick="alert('In construction')">Black and Red Maca - $25.00</a></li>
+            <li><a href="#" onclick="alert('In construction')">Quinoa - $15.00</a></li>
+            <li><a href="#" onclick="alert('In construction')">Goldenberry - $20.00</a></li>
+            <li><a href="#" onclick="alert('In construction')">Camu Camu - $18.00</a></li>
+            <li><a href="#" onclick="alert('In construction')">Purple Corn - $22.00</a></li>
+        </ul>
     </div>
+</section>
 
     <footer id="contact-us">
         <div class="container">
-            <h1>Contact</h1>
-            <p>Email: contact@youhealthier.com | Phone: +01 888-0123-4567</p>
+            <h1 class="header-txt">Contact</h1>
+            <p>Email: contact@youhealthier.com | Phone: +01 8x8-0123-4567</p>
         </div>
     </footer>
 
+    <a href="#home" class="cd-top">&#8679;</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script>
-        let selectedProduct = "";
-        let price = 0;
+        $(document).ready(function () {
+            $('.slider').slick({
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                fade: true,
+                cssEase: 'linear'
+            });
 
-        function openOrderModal(productName, productPrice) {
-            selectedProduct = productName;
-            price = productPrice;
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.cd-top').fadeIn();
+                } else {
+                    $('.cd-top').fadeOut();
+                }
+            });
 
-            document.getElementById("productDetails").innerHTML = `You are ordering: <b>${selectedProduct}</b> - $${price.toFixed(2)}`;
-            document.getElementById("totalPrice").innerHTML = `Total: $${price.toFixed(2)}`;
-            document.getElementById("orderModal").style.display = "block";
-        }
-
-        function closeOrderModal() {
-            document.getElementById("orderModal").style.display = "none";
-        }
-
-        function updateTotal() {
-            let quantity = document.getElementById("quantity").value;
-            let total = price * quantity;
-            document.getElementById("totalPrice").innerHTML = `Total: $${total.toFixed(2)}`;
-        }
-
-        function confirmOrder() {
-            alert(`Your order for ${selectedProduct} has been placed successfully!`);
-            closeOrderModal();
-        }
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 600);
+            });
+        });
     </script>
+<a href="#top" style="
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #333; 
+    color: white; 
+    padding: 20px 25px;   /* Increase padding for larger size */
+    border-radius: 50%; 
+    text-decoration: none; 
+    font-size: 36px;      /* Increase font size for a bigger arrow */
+    display: block;
+    z-index: 9999;">      <!-- Ensure it stays on top -->
+    &#8679;
+</a>
 
 </body>
 
