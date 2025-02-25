@@ -11,11 +11,36 @@
         body {
             font-family: 'Georgia', serif;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
             width: 90%;
             margin: 0 auto;
+        }
+
+        .site-header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-navigation {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+        }
+
+        .main-navigation li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         h1.header-txt {
@@ -54,7 +79,6 @@
             background-color: #ddd;
         }
 
-        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -106,6 +130,51 @@
 
 <body>
 
+    <header class="site-header">
+        <div class="container">
+            <nav>
+                <ul class="main-navigation">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home" class="container">
+        <h1 class="header-txt">Welcome to YouHealthier</h1>
+    </div>
+
+    <section id="about-us">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>We offer 100% organic, natural products free of preservatives, gluten, and GMOs.</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h1 class="header-txt">Our Products</h1>
+            <div class="product-list">
+                <div class="product-item">
+                    <h2>Black and Red Maca</h2>
+                    <p>Boosts stamina and energy.</p>
+                </div>
+                <div class="product-item">
+                    <h2>Quinoa</h2>
+                    <p>Rich in protein and fiber.</p>
+                </div>
+                <div class="product-item">
+                    <h2>Goldenberry</h2>
+                    <p>Packed with antioxidants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="order">
         <div class="container">
             <h1 class="header-txt">Place Your Order</h1>
@@ -119,7 +188,6 @@
         </div>
     </section>
 
-    <!-- Order Modal -->
     <div id="orderModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeOrderModal()">&times;</span>
@@ -131,6 +199,13 @@
             <button onclick="confirmOrder()">Confirm Order</button>
         </div>
     </div>
+
+    <footer id="contact-us">
+        <div class="container">
+            <h1>Contact</h1>
+            <p>Email: contact@youhealthier.com | Phone: +01 888-0123-4567</p>
+        </div>
+    </footer>
 
     <script>
         let selectedProduct = "";
