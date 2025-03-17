@@ -417,7 +417,35 @@
         </div>
     </div>
  </div>
-    
+
+<script>
+    async function fetchProducts() {
+        try {
+            let response = await fetch("http://localhost:5000/api/products");
+            let products = await response.json();
+            let productList = document.querySelector(".product-list");
+            productList.innerHTML = ""; // Clear existing static products
+
+            products.forEach(product => {
+                let productItem = `
+                    <div class="product-item">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h2>${product.name}</h2>
+                        <p>${product.description}</p>
+                        <p><strong>Price: $${product.price}</strong></p>
+                    </div>
+                `;
+                productList.innerHTML += productItem;
+            });
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    }
+
+    // Fetch products when the page loads
+    window.onload = fetchProducts;
+</script>
+
 </body>
 
 </html>
